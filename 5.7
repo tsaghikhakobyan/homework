@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int year = scanner.nextInt();
+        checkLeapYear(year);
+    }
+
+    public static void checkLeapYear(int year) {
+        int changeYear = 1582;// I read this in google
+        if (year % 4 == 0) {
+            System.out.println("The " + year + " year is a leap year");
+        }
+        if (year > changeYear) {
+            if (year % 100 == 0 && year % 400 != 0) {
+                System.out.println("The " + year + " year is not a leap year");
+            } else {
+                System.out.println("The " + year + " year is not a leap year");
+            }
+        }
+    }
+}
