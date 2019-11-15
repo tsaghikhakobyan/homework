@@ -1,0 +1,11 @@
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        findMinimum(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
+    }
+
+    public static void findMinimum(double number1, double number2, double number3) {
+        double minimum = Math.min(Math.min(number1, number2),number3);
+        System.out.println(minimum);
+    }
+}
