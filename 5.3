@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double number1 = scanner.nextDouble();
+        double number2 = scanner.nextDouble();
+        calculateProduct(number1, number2);
+        calculateCubeofProduct(number1, number2);
+    }
+
+    public static void calculateProduct(double number1, double number2) {
+        double product = number1 * number2;
+        System.out.println(product);
+    }
+
+    public static void calculateCubeofProduct(double number1, double number2) {
+        double cubeProduct = Math.pow((number1 * number2), 3);
+        System.out.println(cubeProduct);
+    }
+}
