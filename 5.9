@@ -1,0 +1,17 @@
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double radius = scanner.nextDouble();
+        calculatePerimeter(radius);
+        calculateArea(radius);
+    }
+    public static void calculatePerimeter(double radius) {
+        double perimeter = 2 * Math.PI * radius;
+        System.out.println(perimeter);
+    }
+
+    public static void calculateArea(double radius) {
+        double area = Math.PI * Math.pow(radius, 2);
+        System.out.println(area);
+    }
+}
