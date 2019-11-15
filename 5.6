@@ -1,0 +1,17 @@
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String sentence = scanner.nextLine();
+        countWords(sentence);
+    }
+
+    public static void countWords(String sentence) {
+        int count = 1;
+        for (int i = 0; i <= sentence.length() - 1; i++) {
+            if (String.valueOf(sentence.charAt(i)).equals(" ")) {
+                count = count + 1;
+            }
+        }
+        System.out.println(count);
+    }
+}
