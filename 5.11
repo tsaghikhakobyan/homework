@@ -1,0 +1,23 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = new int[10];
+        initializeArray(numbers);
+        printArray(numbers);
+
+    }
+
+    public static void initializeArray(int[] numbers) {
+        Random random = new Random();
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = random.nextInt(100);
+        }
+    }
+
+    public static void printArray(int[] numbers) {
+        Random random = new Random();
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = random.nextInt(100);
+            System.out.print(numbers[i] + " ");
+        }
+    }
+}

@@ -1,0 +1,17 @@
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        createMatrix(n);
+    }
+
+    public static void createMatrix(int n) {
+        Random random = new Random();
+        int nums[][] = new int[n][n];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                nums[i][j] = random.nextInt(100);
+            }
+        }
+    }
+}
