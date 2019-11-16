@@ -1,23 +1,15 @@
 public class Main {
     public static void main(String[] args) {
         int[] numbers = new int[10];
-        initializeArray(numbers);
-        printArray(numbers);
+        sortArrayAsc(numbers);
+       }
 
-    }
-
-    public static void initializeArray(int[] numbers) {
+    public static void sortArrayAsc(int[] numbers) {
         Random random = new Random();
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = random.nextInt(100);
-        }
-    }
-
-    public static void printArray(int[] numbers) {
-        Random random = new Random();
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = random.nextInt(100);
-            System.out.print(numbers[i] + " ");
+                      for (int i = 0; i < numbers.length; i++) {
+                                               System.out.print(numbers[i] + " ");
         }
     }
 }
