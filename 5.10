@@ -1,0 +1,35 @@
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double side1 = scanner.nextDouble();
+        double side2 = scanner.nextDouble();
+        double side3 = scanner.nextDouble();
+        triangleIsValid(side1, side2, side3);
+        calculateTrianglePerimeter(side1, side2, side3);
+        calculateTriangleArea(side1, side2, side3);
+
+    }
+
+    public static boolean triangleIsValid(double side1, double side2, double side3) {
+        return (side1 + side2 > side3 && side2 + side3 > side1 && side1 + side3 > side2);
+    }
+
+    public static void calculateTrianglePerimeter(double side1, double side2, double side3) {
+        if (triangleIsValid(side1, side2, side3)) {
+            double perimeter = side1 + side2 + side3;
+            System.out.println("The perimeter of triangle is equal to " + perimeter);
+        } else {
+            System.out.println("Triangle is not valid");
+        }
+    }
+
+    public static void calculateTriangleArea(double side1, double side2, double side3) {
+        if (triangleIsValid(side1, side2, side3)) {
+            double perimeter = side1 + side2 + side3;
+            double area = Math.sqrt(perimeter * (perimeter - side1) * (perimeter - side2) * (perimeter - side3));
+            System.out.println("The area of triangle is equal to " + area);
+        } else {
+            System.out.println("Triangle is not valid");
+        }
+    }
+}
