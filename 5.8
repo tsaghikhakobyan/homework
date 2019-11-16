@@ -1,0 +1,46 @@
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String password = scanner.nextLine();
+        checkThePassword(password);
+    }
+
+    public static boolean isLetter(char ch) {
+        ch = Character.toUpperCase(ch);
+        return (ch >= 'A' && ch <= 'Z');
+    }
+
+    public static boolean isNumeric(char ch) {
+        return (ch >= '0' && ch <= '9');
+    }
+
+    public static void checkThePassword(String password) {
+        int minChar = 10;
+        boolean test = false;
+        int countChar = 0;
+        int countNumber = 0;
+        if (password.length() < 10) {
+            test = false;
+            System.out.println("Password is incorrect- it must have at least ten characters");
+        }
+        for (int i = 0; i < password.length(); i++) {
+            char ch = password.charAt(i);
+            if (isNumeric(ch)) {
+                countNumber++;
+                test = true;
+            } else if (isLetter(ch)) {
+                countChar++;
+            } else if (isLetter(ch) == false && isNumeric(ch) == false) {
+                test = false;
+            }
+            if (countNumber < 2) {
+                test = false;
+            }
+        }
+        if (test == true) {
+            System.out.println("Your password is correct");
+        } else if (test == false) {
+            System.out.println("Your pasword is incorrect");
+        }
+    }
+}
