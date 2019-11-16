@@ -1,0 +1,29 @@
+ublic class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String word = scanner.nextLine();
+        isPalindrom(word);
+        checkwordPalindrom(word);
+    }
+
+    public static boolean isPalindrom(String word) {
+        int test1 = 0;
+        int test2 = word.length() - 1;
+        while (test2 > test1) {
+            if (word.charAt(test1) != word.charAt(test2)) {
+                return false;
+            }
+            ++test1;
+            --test2;
+        }
+        return true;
+    }
+
+    public static void checkwordPalindrom(String word) {
+        if (isPalindrom(word)) {
+            System.out.print(word + " is palindrom");
+        }else{
+            System.out.print(word + " is not palindrom");
+        }
+    }
+}
